@@ -138,56 +138,50 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* Navigation bar layout fix */
-nav .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  white-space: nowrap;
+.floating{
+position:fixed;
+right:18px;
+bottom:18px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:100;
 }
-
-/* Floating Action Buttons Fix */
-.floating {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
+.float{
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+color:#fff;
+text-decoration:none;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
+.whatsapp{background:#25D366}
+.call{background:var(--green)}
 
-.float {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+@media(max-width:768px){
+.menu{display:none}
+.hero h1{font-size:40px}
+.stats{grid-template-columns:1fr;gap:25px}
+.contact{grid-template-columns:1fr}
 }
-
-.whatsapp{background: #25D366 !important;}
-.call{background: #0088cc !important;}
-
-/* Responsive Adjustments for Mobile */
-@media (max-width: 768px) {
-  .menu { display: none; }
-  .stats { grid-template-columns: 1fr !important; gap: 15px !important; }
-  .hero h1 { font-size: 28px !important; }
-}
+</style>
 </head>
 
 <body>
 
+<div class="topbar">
+📞 +251937161102 • 📍 Jemo / Nifas Silk Lafto • Addis Ababa • 24/7 Service
+</div>
+
 <nav>
 <div class="wrap">
 <div class="logo">
-  <img src="logo.png" alt="Home Nursing Services Logo" style="height: 40px; width: auto; object-fit: contain; vertical-align: middle; margin-right: 8px; border: none; outline: none; mix-blend-mode: multiply;">
-  Home Nursing Services
+<i class="fa-solid fa-house-medical"></i>
+Home Nursing Services
 </div>
 
 <ul class="menu">
@@ -309,11 +303,13 @@ nav .wrap {
 
 <div class="gallery">
 
+<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800" alt="Nurse with elderly patient">
+
 <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800" alt="Medical equipment">
 
-<img src="home.jpg" alt="heme nursing service" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
+<img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800" alt="Hospital supplies">
 
-<img src="homes.jpg" alt="heme nursing service" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
+<img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800" alt="Home care equipment">
 
 </div>
 
@@ -348,12 +344,34 @@ nav .wrap {
 </div>
 </section>
 
-  </div>
+<section id="contact">
+<div class="wrap">
+
+<div class="title">
+<h2>Book an Appointment</h2>
+</div>
+
+<div class="contact">
+
+<div class="info">
+
+<p><i class="fa-solid fa-phone"></i> +251937161102</p>
+
+<p><i class="fa-brands fa-whatsapp"></i> WhatsApp Available 24/7</p>
+
+<p><i class="fa-solid fa-envelope"></i> yisihakm20@gmail.com</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Jemo / Nifas Silk Lafto, Addis Ababa</p>
+
+<p><i class="fa-solid fa-clock"></i> 24 Hours Service</p>
+
+<iframe src="https://www.google.com/maps?q=Jemo,Addis+Ababa,Ethiopia&output=embed"
+width="100%" height="240" style="border:0;border-radius:18px;" loading="lazy"></iframe>
+
+</div>
+
 <form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="0d12c737-7c5a-4685-ad62-5395c0a8df7a">
-  <form action="https://api.web3forms.com/submit" method="POST">
-  <h2 style="font-size: 22px; font-weight: 700; text-align: center; margin-bottom: 20px; background: linear-gradient(135deg, #00695c, #d81b60); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Request a Nurse</h2>
-  <input type="hidden" name="access_key" value="0d12c797-7c5a-4685-ad62-5395c0a8d11a">
   <input type="text" name="name" placeholder="Full Name" required>
   <input type="tel" name="phone" placeholder="Phone Number" required>
   <input type="date" name="date">
@@ -363,96 +381,21 @@ nav .wrap {
 </div>
 </div>
 </section>
-  
-  <!-- 6. Join Our Team -->
-    <section id="careers">
-  <div class="form-box" style="max-width: 700px; margin: 0 auto;"> 
-    <h2 class="section-title" style="text-align: center;">Join Our Team Apply Job</h2>
-            <form action="https://formsubmit.co/yisihakm20@gmail.com" method="POST" enctype="multipart/form-data">
-  <input type="hidden" name="_subject" value="New Job Application - Home Nursing Service">
-  <input type="hidden" name="_captcha" value="false">
 
-  <div class="form-group">
-    <label>Full Name</label>
-    <input type="text" name="Full Name" placeholder="Enter your full name" required>
-  </div>
-  
-  <div class="form-group">
-    <label>Professional Discipline / Specialty</label>
-    <input type="text" name="Specialty" placeholder="e.g. nurse / midwife" required>
-  </div>
+<footer>
 
-  <div class="form-group">
-    <label>Work Experience</label>
-    <select name="Work Experience" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; background: white;">
-      <option value="" disabled selected>Select years of experience</option>
-      <option value="0-2 years">0 - 2 years</option>
-      <option value="2-5 years">2 - 5 years</option>
-      <option value="5+ years">5+ years</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label>Upload Resume/CV (PDF/DOC)</label>
-    <input type="file" name="attachment" accept=".pdf,.doc,.docx" required>
-  </div>
-  
-  <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Submit Application</button>
-</form>
-        </div>
-    </section>
+<h2>Home Nursing Services</h2>
 
-<section id="contact" style="padding: 50px 20px; max-width: 1100px; margin: 0 auto;">
-  <div style="text-align: center; margin-bottom: 30px;">
-    <h2 style="font-size: 2rem; color: #1e3932; margin-bottom: 8px;">Contact Us</h2>
-    <div style="width: 50px; height: 3px; background: #e74c3c; margin: 0 auto;"></div>
-  </div>
+<p>Professional Nursing Care at Your Home</p>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-    <!-- Left Card: Contact Info -->
-    <div style="flex: 1; min-width: 290px; background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-      <p style="margin-bottom: 15px;"><i class="fa-solid fa-location-dot" style="color: #e74c3c; margin-right: 8px;"></i> <strong>Address:</strong> <a href="https://maps.google.com" style="color: #008080;">Jemo / Nifas Silk Lafto, Addis Ababa</a></p>
-      <p style="margin-bottom: 15px;"><i class="fa-solid fa-phone" style="color: #008080; margin-right: 8px;"></i> <strong>Mobile:</strong> <a href="tel:+251937161102" style="color: #008080;">+251937161102</a></p>
-      <p style="margin-bottom: 15px;"><i class="fa-brands fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/251937161102" style="color: #008080;">Available 24/7</a></p>
-      <p style="margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="color: #e67e22; margin-right: 8px;"></i> <strong>Email:</strong> <a href="mailto:yisihakm20@gmail.com" style="color: #008080;">yisihakm20@gmail.com</a></p>
-      <p style="margin-bottom: 0;"><i class="fa-solid fa-clock" style="color: #1b1fa2; margin-right: 8px;"></i> <strong>Operating Hours:</strong> <span style="background: #e74c3c; color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: bold;">24/7</span> Home Nursing Services</p>
-    </div>
+<p>Jemo / Nifas Silk Lafto • Addis Ababa</p>
 
-    <!-- Right Card: Google Map -->
-    <div style="flex: 1; min-width: 290px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-      <iframe src="https://www.google.com/maps?q=Jemo,Addis_Ababa,Ethiopia&output=embed" width="100%" height="100%" style="min-height: 280px; border: 0;" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
+<p>📞 +251937161102</p>
 
-<!-- Dark 3-Column Footer -->
-<footer style="background-color: #1b263b; color: #ffffff; padding: 40px 20px 20px 20px; margin-top: 40px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1100px; margin: 0 auto;">
-    <div style="flex: 1; min-width: 220px;">
-      <h3 style="color: #e74c3c; margin-bottom: 15px;">Home Nursing Services</h3>
-      <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5;">Providing professional nursing care directly at your home with comfort and safety.</p>
-    </div>
+<p>✉️ yisihakm20@gmail.com</p>
 
-    <div style="flex: 1; min-width: 220px;">
-      <h3 style="color: #e74c3c; margin-bottom: 15px;">Quick Links</h3>
-      <ul style="list-style: none; padding: 0; line-height: 2;">
-        <li><a href="#services" style="color: #cbd5e1; text-decoration: none;">Services</a></li>
-        <li><a href="#gallery" style="color: #cbd5e1; text-decoration: none;">Gallery</a></li>
-        <li><a href="#contact" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-      </ul>
-    </div>
+<p>© 2026 Home Nursing Services</p>
 
-    <div style="flex: 1; min-width: 220px;">
-      <h3 style="color: #e74c3c; margin-bottom: 15px;">Contact Info</h3>
-      <p style="color: #cbd5e1; margin-bottom: 8px;">Jemo / Nifas Silk Lafto, Addis Ababa</p>
-      <p style="color: #cbd5e1; margin-bottom: 8px;">Phone: +251937161102</p>
-      <p style="color: #cbd5e1;">Email: yisihakm20@gmail.com</p>
-    </div>
-  </div>
-
-  <div style="text-align: center; border-top: 1px solid #334155; margin-top: 30px; padding-top: 15px; color: #94a3b8; font-size: 0.85rem;">
-    <p>&copy; 2026 Home Nursing Services. All Rights Reserved.</p>
-  </div>
 </footer>
 
 <div class="floating">
@@ -465,16 +408,7 @@ nav .wrap {
 <i class="fa-solid fa-phone"></i>
 </a>
 
-<!-- Custom Success Popup -->
-<div id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
-  <div style="background:#fff; padding:30px; border-radius:15px; text-align:center; max-width:90%; width:350px; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-    <div style="width:60px; height:60px; background:#e6f4ea; color:#2e7d32; font-size:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px auto;">✓</div>
-    <h3 style="margin:0 0 10px 0; color:#1b4332; font-size:22px;">Home Nursing Services</h3>
-    <p style="color:#555; font-size:15px; margin-bottom:20px;">Thank you! Your appointment request has been sent successfully.</p>
-    <button onclick="document.getElementById('successModal').style.display='none'" style="background:linear-gradient(135deg, #2e7d32, #1b4332); color:#fff; border:none; padding:12px 25px; border-radius:8px; font-weight:bold; font-size:15px; cursor:pointer; width:100%;">OK</button>
-  </div>
 </div>
-
 <script>
   const form = document.querySelector('form[action*="web3forms"]');
   form.addEventListener('submit', async (e) => {
@@ -489,7 +423,7 @@ nav .wrap {
     });
 
     if (response.ok) {
-      document.getElementById('successModal').style.display = 'flex';
+      alert('Thank you! Your appointment request has been sent successfully.');
       form.reset();
     } else {
       alert('Something went wrong. Please try again.');
@@ -499,3 +433,5 @@ nav .wrap {
     btn.disabled = false;
   });
 </script>
+</body>
+</html>
